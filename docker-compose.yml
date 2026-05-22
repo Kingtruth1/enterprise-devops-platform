@@ -1,0 +1,36 @@
+services:
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: enterprise-backend
+
+    ports:
+      - "3001:3001"
+
+    env_file:
+      - ./backend/.env
+
+    depends_on:
+      - postgres
+
+  postgres:
+
+    image: postgres:16
+
+    container_name: enterprise-db
+
+    environment:
+      POSTGRES_USER: devops
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: enterprise
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
