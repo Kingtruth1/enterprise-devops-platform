@@ -8,7 +8,7 @@ const [data,setData]=useState(null)
 useEffect(()=>{
 
 axios
-.get("http://localhost:3001")
+.get("/api")
 
 .then((res)=>{
 
