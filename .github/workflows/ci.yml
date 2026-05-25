@@ -46,3 +46,7 @@ jobs:
           docker build \
           -t enterprise-frontend \
           ./frontend
+
+      - name: Run Backend Test
+        working-directory: backend
+        run: node test.js
