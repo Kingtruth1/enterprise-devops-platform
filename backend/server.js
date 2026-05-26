@@ -8,7 +8,7 @@ const app=express()
 
 app.use(cors())
 
-app.get("/",async(req,res)=>{
+app.get("/api",async(req,res)=>{
 
 try{
 
