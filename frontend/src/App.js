@@ -34,7 +34,7 @@ fontFamily:"Arial"
 >
 
 <h1>
-Enterprise DevOps Platform - CICD Working
+Enterprise DevOps Platform - CI/CD Working
 </h1>
 
 {
